@@ -6,7 +6,7 @@
 
 import { mkdirSync, readFileSync, writeFileSync } from "fs";
 import { dirname, join } from "path";
-import { DefaultEquibopSettings } from "shared/defaultSettings";
+import { DefaultSolySettings } from "shared/defaultSettings";
 import type { Settings as TSettings, State as TState } from "shared/settings";
 import { SettingsStore } from "shared/utils/SettingsStore";
 
@@ -52,6 +52,6 @@ function loadSettings<T extends object = any>(file: string, name: string, defaul
     return store;
 }
 
-export const Settings = loadSettings<TSettings>(SETTINGS_FILE, "Equibop settings", DefaultEquibopSettings);
+export const Settings = loadSettings<TSettings>(SETTINGS_FILE, "Soly settings", DefaultSolySettings);
 export const VencordSettings = loadSettings<any>(VENCORD_SETTINGS_FILE, "Vencord settings");
-export const State = loadSettings<TState>(STATE_FILE, "Equibop state");
+export const State = loadSettings<TState>(STATE_FILE, "Soly state");

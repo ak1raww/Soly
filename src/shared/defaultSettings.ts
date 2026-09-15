@@ -6,7 +6,7 @@
 
 import { Settings } from "./settings";
 
-export const DefaultEquibopSettings: Settings = {
+export const DefaultSolySettings: Settings = {
     discordBranch: "stable",
     hardwareAcceleration: true,
     hardwareVideoAcceleration: false,
